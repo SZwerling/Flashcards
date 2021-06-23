@@ -16,7 +16,7 @@ const Card = () => {
    function RenderCard() {
       return (
          <div
-            className={`card ${flip ? "flip" : ""}`}
+         className={`card ${flip ? 'flip' : ''}`}
             onClick={() => setFlip(!flip)}
          >
             <div className="front">{FLASHCARDS[index].front}</div>
@@ -27,7 +27,7 @@ const Card = () => {
 
    return (
       <div className="card-grid">
-         <button onClick={() => next()}>Next</button>
+         <button className="btn" onClick={() => next()}>Next</button>
 
             <RenderCard />
          

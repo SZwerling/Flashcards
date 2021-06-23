@@ -6,7 +6,9 @@ import './app.css';
 const App = () => {
    
    return (
+      <div className="container">
       <Card />
+      </div>
    );
 };
 
