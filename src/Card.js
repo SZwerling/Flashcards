@@ -16,21 +16,21 @@ const Card = () => {
    function RenderCard() {
       return (
          <div
-         className={`card ${flip ? 'flip' : ''}`}
+         className='flip-card-inner'
             onClick={() => setFlip(!flip)}
          >
-            <div className="front">{FLASHCARDS[index].front}</div>
-            <div className="back">{FLASHCARDS[index].back}</div>
+            <div style={{padding:"100px"}} className="flip-card-front">{FLASHCARDS[index].front}</div>
+            <div style={{padding:"100px"}} className="flip-card-back">{FLASHCARDS[index].back}</div>
          </div>
       );
    }
 
    return (
-      <div className="card-grid">
+      <div>
          <button className="btn" onClick={() => next()}>Next</button>
-
-            <RenderCard />
-         
+         <div className="flip-card">         
+               <RenderCard />
+         </div>
       </div>
    );
 };
